@@ -1,0 +1,24 @@
+{
+  "name": "olegmifle/routing-key-messenger-middleware",
+  "description": "Add Routing Key Middleware for the Symfony Messenger Component",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Oleg Mifle",
+      "email": "mifleov@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "symfony/messenger": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "RoutingKeyMiddleware\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
