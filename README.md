@@ -4,11 +4,11 @@ A simple middleware to add routing key to message.
 
 ## Dependencies
 * php >= 7.4
-* symfony/messenger >= 4.0
+* symfony/messenger >= 4.1
 
 ## Installation
 ```bash
-composer require olegmifle/routing-key-messenger-middleware
+composer require olegmifle/routing-key-middleware
 ```
 # Usage
 Configure this Middleware to your MessageBus
@@ -21,14 +21,14 @@ framework:
         buses:
             message.bus.commands:
                 middleware:
-                    - 'RoutingKeyMiddleware\Middleware\RoutingKeyMiddleware'
+                    - 'Olegmifle\RoutingKeyMiddleware\Middleware\RoutingKeyMiddleware'
 ```
 
 ### Configure your message
 
 ```php
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
-use RoutingKeyMiddleware\Middleware\AddRoutingKeyInterface;
+use Olegmifle\RoutingKeyMiddleware\Middleware\AddRoutingKeyInterface;
 
 class YourAwesomeMessage implements MessageHandlerInterface, AddRoutingKeyInterface
 {
