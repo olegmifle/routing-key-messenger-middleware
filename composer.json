@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=7.4",
-    "symfony/messenger": "^4.1"
+    "symfony/messenger": ">=4.0"
   },
   "autoload": {
     "psr-4": {
