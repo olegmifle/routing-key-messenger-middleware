@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RoutingKeyMiddleware\Middleware;
+namespace Olegmifle\RoutingKeyMiddleware\Middleware;
 
 interface AddRoutingKeyInterface
 {

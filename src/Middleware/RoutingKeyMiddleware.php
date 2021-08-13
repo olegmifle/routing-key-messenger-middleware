@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RoutingKeyMiddleware\Middleware;
+namespace Olegmifle\RoutingKeyMiddleware\Middleware;
 
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
@@ -15,6 +15,7 @@ final class RoutingKeyMiddleware implements MiddlewareInterface
     {
         $stamp = $envelope->last(AmqpReceivedStamp::class);
         $message = $envelope->getMessage();
+
         if ($stamp !== null && $message instanceof AddRoutingKeyInterface) {
             $message->setRoutingKey($stamp->getAmqpEnvelope()->getRoutingKey());
         }
