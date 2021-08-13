@@ -4,7 +4,7 @@ A simple middleware to add routing key to message.
 
 ## Dependencies
 * php >= 7.4
-* symfony/messenger >= 4.1
+* symfony/messenger >= ^4.0
 
 ## Installation
 ```bash
